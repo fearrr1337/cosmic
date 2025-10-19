@@ -1,5 +1,7 @@
 <?php
 
+namespace cosmic\src\Base;
+
 enum Faction: string {
     case Americans = 'American men';
 
@@ -12,4 +14,5 @@ enum Faction: string {
     case Turkish = 'Turkish men';
 
     case French = 'French men';
+
 }
