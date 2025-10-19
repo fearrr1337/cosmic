@@ -1,18 +1,12 @@
 <?php
 
+use cosmic\src\Base;
 
-$base_dir = __DIR__ . "/";
-$singletone = $base_dir . "Patterns/GalacticRegistry.php";
-var_dump($singletone);
-if (file_exists($singletone)) {
-//    echo "Файл существует!";
-    require_once $singletone;
-}
+$base = __DIR__ . "/";
+$spaceShip = $base . "/Base/SpaceShip.php";
+var_dump($spaceShip);
 
-$registry = GalacticRegistry::getInstance();
-$anotherRegistry = GalacticRegistry::getInstance();
-if ($registry === $anotherRegistry) {
-    echo "\nОбъекты идентичны";
-} else {
-    echo "\nНеверно был спроектирован Singleton";
+if (file_exists($spaceShip)) {
+    require_once $spaceShip;
+    echo "Файл подключен и готов к использованию";
 }
